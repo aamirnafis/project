@@ -2,6 +2,7 @@ import sys
 import logging
 from datetime import datetime
 import os
+from srclogger import loggin
 
 # Setup basic logging
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
