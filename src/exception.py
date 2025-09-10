@@ -2,9 +2,8 @@ import sys
 import logging
 from datetime import datetime
 import os
-from srclogger import loggin
 
-# Setup basic logging
+# Setup basic logging configuration
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 logs_dir = os.path.join(os.getcwd(), "logs")
 os.makedirs(logs_dir, exist_ok=True)
@@ -16,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-# Function to extract error details
+# Function to extract detailed error message
 def error_message_detail(error, error_detail: sys):
     _, _, exc_tb = error_detail.exc_info()
     file_name = exc_tb.tb_frame.f_code.co_filename
